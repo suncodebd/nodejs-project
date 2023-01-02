@@ -19,7 +19,7 @@ app.config = {
 
 // create sever
 app.createServer = () => {
-    const server = http.createServer();
+    const server = http.createServer(app.handleReqRes);
     server.listen(app.config.port, () => {
         console.log(`lisitening to port ${app.config.port}`);
     });
